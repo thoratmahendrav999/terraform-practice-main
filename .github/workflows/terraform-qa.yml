@@ -31,4 +31,6 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan -input=false
+        env:
+          TF_VAR_devops_op_trainer: "QA Terraform Plan"
